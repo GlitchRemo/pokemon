@@ -42,7 +42,7 @@ const transpileCard = ({ id, name, ...attributes }) => {
   return card;
 };
 
-const transpileCollection = (content, seperator) => {
+const transformCsv = (content, seperator) => {
   const [headings, ...properties] = content.split("\n");
 
   const cardsData = properties.map((property) =>
@@ -50,8 +50,11 @@ const transpileCollection = (content, seperator) => {
   );
 
   const cardsQuadrets = chunk(cardsData, 4, 0);
+  return cardsQuadrets;
+};
 
-  const cards = cardsQuadrets.map((quadrat) => {
+const transpileCollection = (pokemons) => {
+  const cards = pokemons.map((quadrat) => {
     const cardRow = quadrat
       .map((cardContent) => transpileCard(cardContent))
       .join("");
@@ -59,13 +62,7 @@ const transpileCollection = (content, seperator) => {
     return createElement(cardRow, "div", "card-row");
   });
 
-  const cardCollection = createElement(
-    cards.join(""),
-    "div",
-    "card-collection"
-  );
-
-  return cardCollection;
+  return createElement(cards.join(""), "div", "card-collection");
 };
 
 const main = () => {
@@ -77,7 +74,8 @@ const main = () => {
       console.log(err.message);
     }
 
-    const cardCollection = transpileCollection(content, "|");
+    const pokemons = transformCsv(content, "|");
+    const cardCollection = transpileCollection(pokemons);
     fs.writeFile(htmlFilePath, cardCollection, () => {});
   });
 };
