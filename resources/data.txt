@@ -1,4 +1,4 @@
-id|name|types|speed|HP|XP|attack|defense|weight
+id|name|types|speed|hp|base_experience|attack|defense|weight
 1|bulbasaur|grass,poison|45|45|64|49|49|69
 2|ivysaur|grass,poison|60|60|142|62|63|130
 3|venusaur|grass,poison|80|80|236|82|83|1000
