@@ -14,14 +14,22 @@ const parseRow = (headings, rowData) => {
   return Object.fromEntries(rowData.map((data, i) => [headings[i], data]));
 };
 
-const generatePokemonImage = (id) => {
-  return `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png"/>`;
+const createElement = (content, tag, attributes = {}) => {
+  const classAttribute = attributes.className
+    ? `class="${attributes.className}"`
+    : "";
+  const styleAttribute = attributes.style ? `style="${attributes.style}"` : "";
+
+  return `<${tag} ${classAttribute} ${styleAttribute}>${content}</${tag}>`;
 };
 
-const createElement = (content, tag, className) => {
-  const classAttribute = className ? `class="${className}"` : "";
+const generatePokemonImage = (id) => {
+  const urlId = id.toString().padStart(3, 0);
+  const url = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${urlId}.png`;
+  const className = "avatar";
+  const style = `background-image: url(${url})`;
 
-  return `<${tag} ${classAttribute}>${content}</${tag}>`;
+  return createElement("", "div", { className, style });
 };
 
 const transformAttributes = (attributes, headings) => {
@@ -32,7 +40,7 @@ const transformAttributes = (attributes, headings) => {
   });
 
   const tabulatedFeatures = createElement(features.join(""), "table");
-  return createElement(tabulatedFeatures, "div", "information");
+  return createElement(tabulatedFeatures, "div", { className: "information" });
 };
 
 const createCard = ({ id, name, ...attributes }) => {
@@ -46,11 +54,15 @@ const createCard = ({ id, name, ...attributes }) => {
   ];
   const pokemonImage = generatePokemonImage(id);
 
-  const image = createElement(pokemonImage, "div", "image");
-  const title = createElement(name, "div", "name");
+  const imageContainer = createElement(pokemonImage, "div", {
+    className: "image-container",
+  });
+  const avatarName = createElement(name, "div", { className: "name" });
   const features = transformAttributes(attributes, attributesNames);
 
-  const card = createElement(image + title + features, "div", "card");
+  const card = createElement(imageContainer + avatarName + features, "div", {
+    className: "card",
+  });
 
   return card;
 };
@@ -71,10 +83,10 @@ const generateHtml = (pokemons) => {
       .map((cardContent) => createCard(cardContent))
       .join("");
 
-    return createElement(cardRow, "div", "card-row");
+    return createElement(cardRow, "div", { className: "card-row" });
   });
 
-  return createElement(cards.join(""), "div", "card-collection");
+  return createElement(cards.join(""), "div", { className: "card-collection" });
 };
 
 const main = () => {
