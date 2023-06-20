@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 .page {
   font-size: 21px;
   width: 60%;
@@ -6,16 +10,25 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.pokemon {
-  font-size: 1em;
-  width: 100%;
-  margin: 0 auto;
-  border: 3px solid gainsboro;
-  border-collapse: collapse;
+.logo {
+  height: 15%;
 }
 
 .page-header {
   text-align: center;
+}
+
+main {
+  overflow: scroll;
+  height: 90%;
+  padding-top: 0;
+}
+
+.pokemon {
+  font-size: 1em;
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
 }
 
 .pokemon > thead {
@@ -23,6 +36,8 @@
   background-color: #3b5ba7;
   color: #edebeb;
   font-size: 1.1em;
+  position: sticky;
+  top: 0%;
 }
 
 .pokemon > tbody {
