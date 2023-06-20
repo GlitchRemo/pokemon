@@ -14,6 +14,10 @@ const parseRow = (headings, rowData) => {
   return Object.fromEntries(rowData.map((data, i) => [headings[i], data]));
 };
 
+const generatePokemonImage = (id) => {
+  return `<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${id}.png"/>`;
+};
+
 const createElement = (content, tag, className) => {
   const classAttribute = className ? `class="${className}"` : "";
 
@@ -40,7 +44,9 @@ const createCard = ({ id, name, ...attributes }) => {
     "attack",
     "defense",
   ];
-  const image = createElement("", "div", "image");
+  const pokemonImage = generatePokemonImage(id);
+
+  const image = createElement(pokemonImage, "div", "image");
   const title = createElement(name, "div", "name");
   const features = transformAttributes(attributes, attributesNames);
 

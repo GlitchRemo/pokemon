@@ -1,87 +1,7 @@
 <html>
   <head>
     <title>pokedex</title>
-    <style>
-      .page {
-        width: 70%;
-        margin: 0 auto;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-          sans-serif;
-      }
-
-      .pokedex-image {
-        alt: "pokedex-logo";
-        width: 60%;
-        height: 15%;
-      }
-
-      .page-header {
-        text-align: center;
-        margin-bottom: 3em;
-      }
-
-      .card-collection {
-        display: table;
-        width: 80%;
-        margin: 0 auto;
-        border-spacing: 1em;
-      }
-
-      .card-row {
-        display: table-row;
-      }
-
-      .card {
-        display: table-cell;
-        border-radius: 10px;
-        background-color: rgb(164 212 227);
-        width: 25%;
-      }
-
-      .image {
-        height: 240px;
-        width: 240px;
-        margin: 10px;
-        background-color: rgb(210 233 240);
-        border-radius: 5px;
-      }
-
-      .name {
-        text-transform: capitalize;
-        text-align: center;
-        font-size: 1.2em;
-        margin-bottom: 8px;
-        font-weight: 300;
-      }
-
-      .information {
-        padding-bottom: 20px;
-      }
-
-      .information table {
-        border-collapse: collapse;
-        font-size: 1em;
-        width: 90%;
-        margin: 0 auto;
-      }
-
-      .information table tr {
-        border-bottom: 1px dotted #aeaaaa;
-        line-height: 1.6em;
-      }
-
-      .information th {
-        text-transform: capitalize;
-        text-align: left;
-        font-weight: 300;
-      }
-
-      .information td {
-        font-weight: 200;
-        text-align: right;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/pokedex-cards-style.css" />
     <body>
       <section class="page">
         <header class="page-header">
@@ -90,7 +10,9 @@
         <div class="card-collection">
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container">
+                <div class="character"></div>
+              </div>
               <div class="name">bulbasaur</div>
               <div class="information">
                 <table>
@@ -122,7 +44,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ivysaur</div>
               <div class="information">
                 <table>
@@ -154,7 +76,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">venusaur</div>
               <div class="information">
                 <table>
@@ -186,7 +108,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">charmander</div>
               <div class="information">
                 <table>
@@ -220,7 +142,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">charmeleon</div>
               <div class="information">
                 <table>
@@ -252,7 +174,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">charizard</div>
               <div class="information">
                 <table>
@@ -284,7 +206,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">squirtle</div>
               <div class="information">
                 <table>
@@ -316,7 +238,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">wartortle</div>
               <div class="information">
                 <table>
@@ -350,7 +272,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">blastoise</div>
               <div class="information">
                 <table>
@@ -382,7 +304,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">caterpie</div>
               <div class="information">
                 <table>
@@ -414,7 +336,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">metapod</div>
               <div class="information">
                 <table>
@@ -446,7 +368,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">butterfree</div>
               <div class="information">
                 <table>
@@ -480,7 +402,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">weedle</div>
               <div class="information">
                 <table>
@@ -512,7 +434,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">kakuna</div>
               <div class="information">
                 <table>
@@ -544,7 +466,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">beedrill</div>
               <div class="information">
                 <table>
@@ -576,7 +498,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">pidgey</div>
               <div class="information">
                 <table>
@@ -610,7 +532,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">pidgeotto</div>
               <div class="information">
                 <table>
@@ -642,7 +564,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">pidgeot</div>
               <div class="information">
                 <table>
@@ -674,7 +596,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">rattata</div>
               <div class="information">
                 <table>
@@ -706,7 +628,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">raticate</div>
               <div class="information">
                 <table>
@@ -740,7 +662,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">spearow</div>
               <div class="information">
                 <table>
@@ -772,7 +694,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">fearow</div>
               <div class="information">
                 <table>
@@ -804,7 +726,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ekans</div>
               <div class="information">
                 <table>
@@ -836,7 +758,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">arbok</div>
               <div class="information">
                 <table>
@@ -870,7 +792,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">pikachu</div>
               <div class="information">
                 <table>
@@ -902,7 +824,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">raichu</div>
               <div class="information">
                 <table>
@@ -934,7 +856,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">sandshrew</div>
               <div class="information">
                 <table>
@@ -966,7 +888,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">sandslash</div>
               <div class="information">
                 <table>
@@ -1000,7 +922,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">nidoran-f</div>
               <div class="information">
                 <table>
@@ -1032,7 +954,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">nidorina</div>
               <div class="information">
                 <table>
@@ -1064,7 +986,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">nidoqueen</div>
               <div class="information">
                 <table>
@@ -1096,7 +1018,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">nidoran-m</div>
               <div class="information">
                 <table>
@@ -1130,7 +1052,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">nidorino</div>
               <div class="information">
                 <table>
@@ -1162,7 +1084,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">nidoking</div>
               <div class="information">
                 <table>
@@ -1194,7 +1116,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">clefairy</div>
               <div class="information">
                 <table>
@@ -1226,7 +1148,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">clefable</div>
               <div class="information">
                 <table>
@@ -1260,7 +1182,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">vulpix</div>
               <div class="information">
                 <table>
@@ -1292,7 +1214,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ninetales</div>
               <div class="information">
                 <table>
@@ -1324,7 +1246,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">jigglypuff</div>
               <div class="information">
                 <table>
@@ -1356,7 +1278,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">wigglytuff</div>
               <div class="information">
                 <table>
@@ -1390,7 +1312,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">zubat</div>
               <div class="information">
                 <table>
@@ -1422,7 +1344,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">golbat</div>
               <div class="information">
                 <table>
@@ -1454,7 +1376,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">oddish</div>
               <div class="information">
                 <table>
@@ -1486,7 +1408,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">gloom</div>
               <div class="information">
                 <table>
@@ -1520,7 +1442,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">vileplume</div>
               <div class="information">
                 <table>
@@ -1552,7 +1474,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">paras</div>
               <div class="information">
                 <table>
@@ -1584,7 +1506,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">parasect</div>
               <div class="information">
                 <table>
@@ -1616,7 +1538,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">venonat</div>
               <div class="information">
                 <table>
@@ -1650,7 +1572,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">venomoth</div>
               <div class="information">
                 <table>
@@ -1682,7 +1604,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">diglett</div>
               <div class="information">
                 <table>
@@ -1714,7 +1636,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">dugtrio</div>
               <div class="information">
                 <table>
@@ -1746,7 +1668,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">meowth</div>
               <div class="information">
                 <table>
@@ -1780,7 +1702,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">persian</div>
               <div class="information">
                 <table>
@@ -1812,7 +1734,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">psyduck</div>
               <div class="information">
                 <table>
@@ -1844,7 +1766,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">golduck</div>
               <div class="information">
                 <table>
@@ -1876,7 +1798,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">mankey</div>
               <div class="information">
                 <table>
@@ -1910,7 +1832,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">primeape</div>
               <div class="information">
                 <table>
@@ -1942,7 +1864,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">growlithe</div>
               <div class="information">
                 <table>
@@ -1974,7 +1896,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">arcanine</div>
               <div class="information">
                 <table>
@@ -2006,7 +1928,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">poliwag</div>
               <div class="information">
                 <table>
@@ -2040,7 +1962,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">poliwhirl</div>
               <div class="information">
                 <table>
@@ -2072,7 +1994,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">poliwrath</div>
               <div class="information">
                 <table>
@@ -2104,7 +2026,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">abra</div>
               <div class="information">
                 <table>
@@ -2136,7 +2058,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">kadabra</div>
               <div class="information">
                 <table>
@@ -2170,7 +2092,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">alakazam</div>
               <div class="information">
                 <table>
@@ -2202,7 +2124,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">machop</div>
               <div class="information">
                 <table>
@@ -2234,7 +2156,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">machoke</div>
               <div class="information">
                 <table>
@@ -2266,7 +2188,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">machamp</div>
               <div class="information">
                 <table>
@@ -2300,7 +2222,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">bellsprout</div>
               <div class="information">
                 <table>
@@ -2332,7 +2254,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">weepinbell</div>
               <div class="information">
                 <table>
@@ -2364,7 +2286,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">victreebel</div>
               <div class="information">
                 <table>
@@ -2396,7 +2318,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">tentacool</div>
               <div class="information">
                 <table>
@@ -2430,7 +2352,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">tentacruel</div>
               <div class="information">
                 <table>
@@ -2462,7 +2384,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">geodude</div>
               <div class="information">
                 <table>
@@ -2494,7 +2416,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">graveler</div>
               <div class="information">
                 <table>
@@ -2526,7 +2448,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">golem</div>
               <div class="information">
                 <table>
@@ -2560,7 +2482,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ponyta</div>
               <div class="information">
                 <table>
@@ -2592,7 +2514,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">rapidash</div>
               <div class="information">
                 <table>
@@ -2624,7 +2546,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">slowpoke</div>
               <div class="information">
                 <table>
@@ -2656,7 +2578,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">slowbro</div>
               <div class="information">
                 <table>
@@ -2690,7 +2612,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">magnemite</div>
               <div class="information">
                 <table>
@@ -2722,7 +2644,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">magneton</div>
               <div class="information">
                 <table>
@@ -2754,7 +2676,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">farfetchd</div>
               <div class="information">
                 <table>
@@ -2786,7 +2708,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">doduo</div>
               <div class="information">
                 <table>
@@ -2820,7 +2742,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">dodrio</div>
               <div class="information">
                 <table>
@@ -2852,7 +2774,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">seel</div>
               <div class="information">
                 <table>
@@ -2884,7 +2806,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">dewgong</div>
               <div class="information">
                 <table>
@@ -2916,7 +2838,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">grimer</div>
               <div class="information">
                 <table>
@@ -2950,7 +2872,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">muk</div>
               <div class="information">
                 <table>
@@ -2982,7 +2904,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">shellder</div>
               <div class="information">
                 <table>
@@ -3014,7 +2936,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">cloyster</div>
               <div class="information">
                 <table>
@@ -3046,7 +2968,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">gastly</div>
               <div class="information">
                 <table>
@@ -3080,7 +3002,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">haunter</div>
               <div class="information">
                 <table>
@@ -3112,7 +3034,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">gengar</div>
               <div class="information">
                 <table>
@@ -3144,7 +3066,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">onix</div>
               <div class="information">
                 <table>
@@ -3176,7 +3098,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">drowzee</div>
               <div class="information">
                 <table>
@@ -3210,7 +3132,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">hypno</div>
               <div class="information">
                 <table>
@@ -3242,7 +3164,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">krabby</div>
               <div class="information">
                 <table>
@@ -3274,7 +3196,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">kingler</div>
               <div class="information">
                 <table>
@@ -3306,7 +3228,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">voltorb</div>
               <div class="information">
                 <table>
@@ -3340,7 +3262,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">electrode</div>
               <div class="information">
                 <table>
@@ -3372,7 +3294,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">exeggcute</div>
               <div class="information">
                 <table>
@@ -3404,7 +3326,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">exeggutor</div>
               <div class="information">
                 <table>
@@ -3436,7 +3358,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">cubone</div>
               <div class="information">
                 <table>
@@ -3470,7 +3392,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">marowak</div>
               <div class="information">
                 <table>
@@ -3502,7 +3424,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">hitmonlee</div>
               <div class="information">
                 <table>
@@ -3534,7 +3456,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">hitmonchan</div>
               <div class="information">
                 <table>
@@ -3566,7 +3488,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">lickitung</div>
               <div class="information">
                 <table>
@@ -3600,7 +3522,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">koffing</div>
               <div class="information">
                 <table>
@@ -3632,7 +3554,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">weezing</div>
               <div class="information">
                 <table>
@@ -3664,7 +3586,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">rhyhorn</div>
               <div class="information">
                 <table>
@@ -3696,7 +3618,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">rhydon</div>
               <div class="information">
                 <table>
@@ -3730,7 +3652,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">chansey</div>
               <div class="information">
                 <table>
@@ -3762,7 +3684,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">tangela</div>
               <div class="information">
                 <table>
@@ -3794,7 +3716,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">kangaskhan</div>
               <div class="information">
                 <table>
@@ -3826,7 +3748,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">horsea</div>
               <div class="information">
                 <table>
@@ -3860,7 +3782,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">seadra</div>
               <div class="information">
                 <table>
@@ -3892,7 +3814,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">goldeen</div>
               <div class="information">
                 <table>
@@ -3924,7 +3846,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">seaking</div>
               <div class="information">
                 <table>
@@ -3956,7 +3878,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">staryu</div>
               <div class="information">
                 <table>
@@ -3990,7 +3912,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">starmie</div>
               <div class="information">
                 <table>
@@ -4022,7 +3944,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">mr-mime</div>
               <div class="information">
                 <table>
@@ -4054,7 +3976,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">scyther</div>
               <div class="information">
                 <table>
@@ -4086,7 +4008,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">jynx</div>
               <div class="information">
                 <table>
@@ -4120,7 +4042,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">electabuzz</div>
               <div class="information">
                 <table>
@@ -4152,7 +4074,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">magmar</div>
               <div class="information">
                 <table>
@@ -4184,7 +4106,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">pinsir</div>
               <div class="information">
                 <table>
@@ -4216,7 +4138,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">tauros</div>
               <div class="information">
                 <table>
@@ -4250,7 +4172,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">magikarp</div>
               <div class="information">
                 <table>
@@ -4282,7 +4204,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">gyarados</div>
               <div class="information">
                 <table>
@@ -4314,7 +4236,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">lapras</div>
               <div class="information">
                 <table>
@@ -4346,7 +4268,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ditto</div>
               <div class="information">
                 <table>
@@ -4380,7 +4302,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">eevee</div>
               <div class="information">
                 <table>
@@ -4412,7 +4334,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">vaporeon</div>
               <div class="information">
                 <table>
@@ -4444,7 +4366,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">jolteon</div>
               <div class="information">
                 <table>
@@ -4476,7 +4398,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">flareon</div>
               <div class="information">
                 <table>
@@ -4510,7 +4432,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">porygon</div>
               <div class="information">
                 <table>
@@ -4542,7 +4464,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">omanyte</div>
               <div class="information">
                 <table>
@@ -4574,7 +4496,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">omastar</div>
               <div class="information">
                 <table>
@@ -4606,7 +4528,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">kabuto</div>
               <div class="information">
                 <table>
@@ -4640,7 +4562,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">kabutops</div>
               <div class="information">
                 <table>
@@ -4672,7 +4594,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">aerodactyl</div>
               <div class="information">
                 <table>
@@ -4704,7 +4626,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">snorlax</div>
               <div class="information">
                 <table>
@@ -4736,7 +4658,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">articuno</div>
               <div class="information">
                 <table>
@@ -4770,7 +4692,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">zapdos</div>
               <div class="information">
                 <table>
@@ -4802,7 +4724,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">moltres</div>
               <div class="information">
                 <table>
@@ -4834,7 +4756,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">dratini</div>
               <div class="information">
                 <table>
@@ -4866,7 +4788,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">dragonair</div>
               <div class="information">
                 <table>
@@ -4900,7 +4822,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">dragonite</div>
               <div class="information">
                 <table>
@@ -4932,7 +4854,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">mewtwo</div>
               <div class="information">
                 <table>
@@ -4964,7 +4886,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">mew</div>
               <div class="information">
                 <table>
@@ -4996,7 +4918,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">chikorita</div>
               <div class="information">
                 <table>
@@ -5030,7 +4952,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">bayleef</div>
               <div class="information">
                 <table>
@@ -5062,7 +4984,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">meganium</div>
               <div class="information">
                 <table>
@@ -5094,7 +5016,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">cyndaquil</div>
               <div class="information">
                 <table>
@@ -5126,7 +5048,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">quilava</div>
               <div class="information">
                 <table>
@@ -5160,7 +5082,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">typhlosion</div>
               <div class="information">
                 <table>
@@ -5192,7 +5114,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">totodile</div>
               <div class="information">
                 <table>
@@ -5224,7 +5146,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">croconaw</div>
               <div class="information">
                 <table>
@@ -5256,7 +5178,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">feraligatr</div>
               <div class="information">
                 <table>
@@ -5290,7 +5212,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">sentret</div>
               <div class="information">
                 <table>
@@ -5322,7 +5244,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">furret</div>
               <div class="information">
                 <table>
@@ -5354,7 +5276,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">hoothoot</div>
               <div class="information">
                 <table>
@@ -5386,7 +5308,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">noctowl</div>
               <div class="information">
                 <table>
@@ -5420,7 +5342,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ledyba</div>
               <div class="information">
                 <table>
@@ -5452,7 +5374,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ledian</div>
               <div class="information">
                 <table>
@@ -5484,7 +5406,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">spinarak</div>
               <div class="information">
                 <table>
@@ -5516,7 +5438,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ariados</div>
               <div class="information">
                 <table>
@@ -5550,7 +5472,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">crobat</div>
               <div class="information">
                 <table>
@@ -5582,7 +5504,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">chinchou</div>
               <div class="information">
                 <table>
@@ -5614,7 +5536,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">lanturn</div>
               <div class="information">
                 <table>
@@ -5646,7 +5568,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">pichu</div>
               <div class="information">
                 <table>
@@ -5680,7 +5602,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">cleffa</div>
               <div class="information">
                 <table>
@@ -5712,7 +5634,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">igglybuff</div>
               <div class="information">
                 <table>
@@ -5744,7 +5666,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">togepi</div>
               <div class="information">
                 <table>
@@ -5776,7 +5698,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">togetic</div>
               <div class="information">
                 <table>
@@ -5810,7 +5732,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">natu</div>
               <div class="information">
                 <table>
@@ -5842,7 +5764,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">xatu</div>
               <div class="information">
                 <table>
@@ -5874,7 +5796,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">mareep</div>
               <div class="information">
                 <table>
@@ -5906,7 +5828,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">flaaffy</div>
               <div class="information">
                 <table>
@@ -5940,7 +5862,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">ampharos</div>
               <div class="information">
                 <table>
@@ -5972,7 +5894,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">bellossom</div>
               <div class="information">
                 <table>
@@ -6004,7 +5926,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">marill</div>
               <div class="information">
                 <table>
@@ -6036,7 +5958,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">azumarill</div>
               <div class="information">
                 <table>
@@ -6070,7 +5992,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">sudowoodo</div>
               <div class="information">
                 <table>
@@ -6102,7 +6024,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">politoed</div>
               <div class="information">
                 <table>
@@ -6134,7 +6056,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">hoppip</div>
               <div class="information">
                 <table>
@@ -6166,7 +6088,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">skiploom</div>
               <div class="information">
                 <table>
@@ -6200,7 +6122,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">jumpluff</div>
               <div class="information">
                 <table>
@@ -6232,7 +6154,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">aipom</div>
               <div class="information">
                 <table>
@@ -6264,7 +6186,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">sunkern</div>
               <div class="information">
                 <table>
@@ -6296,7 +6218,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">sunflora</div>
               <div class="information">
                 <table>
@@ -6330,7 +6252,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">yanma</div>
               <div class="information">
                 <table>
@@ -6362,7 +6284,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">wooper</div>
               <div class="information">
                 <table>
@@ -6394,7 +6316,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">quagsire</div>
               <div class="information">
                 <table>
@@ -6426,7 +6348,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">espeon</div>
               <div class="information">
                 <table>
@@ -6460,7 +6382,7 @@
           </div>
           <div class="card-row">
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">umbreon</div>
               <div class="information">
                 <table>
@@ -6492,7 +6414,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">murkrow</div>
               <div class="information">
                 <table>
@@ -6524,7 +6446,7 @@
               </div>
             </div>
             <div class="card">
-              <div class="image"></div>
+              <div class="image-container"></div>
               <div class="name">slowking</div>
               <div class="information">
                 <table>
