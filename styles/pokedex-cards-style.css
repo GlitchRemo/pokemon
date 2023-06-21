@@ -30,34 +30,25 @@ main {
 }
 
 .card-collection {
-  display: table;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   width: 100%;
   border-spacing: 1em;
-  margin: 0 auto;
-}
-
-.card-row {
-  display: table-row;
 }
 
 .card {
-  display: table-cell;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em;
+  gap: 20px;
   border-radius: 10px;
   background-color: rgb(164 212 227);
-  width: 25%;
-}
-
-.card:hover {
-  box-shadow: 1px 1px 10px black;
-  background-color: rgb(164, 201, 213);
-  position: relative;
-  bottom: 0.1em;
 }
 
 .image-container {
   height: 240px;
   aspect-ratio: 1;
-  margin: 0.5em auto;
   background-color: rgb(210 233 240);
   border-radius: 5px;
   padding: 1em;
@@ -70,7 +61,14 @@ main {
   background-size: contain;
 }
 
-.avatar-name {
+.card:hover {
+  box-shadow: 1px 1px 10px black;
+  background-color: rgb(164, 201, 213);
+  position: relative;
+  bottom: 0.1em;
+}
+
+.name {
   text-transform: capitalize;
   text-align: center;
   font-size: 1.2em;
@@ -84,8 +82,8 @@ main {
 
 .information table {
   border-collapse: collapse;
-  font-size: 1em;
-  width: 90%;
+  font-size: 1.2em;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -103,4 +101,84 @@ main {
 .information td {
   font-weight: 300;
   text-align: right;
+}
+
+.poketype {
+  border-radius: 5px;
+  margin: 2px;
+  padding: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.grass {
+  background-color: rgb(152, 170, 126);
+}
+
+.poison {
+  background-color: rgb(148, 70, 148);
+}
+
+.fire {
+  background-color: rgb(255, 106, 0);
+}
+
+.flying {
+  background-color: rgb(194, 161, 199);
+}
+
+.water {
+  background-color: rgb(116, 157, 207);
+}
+
+.bug {
+  background-color: rgb(136, 207, 116);
+}
+
+.normal {
+  background-color: rgb(99, 127, 86);
+}
+
+.electric {
+  background-color: rgb(227, 221, 55);
+}
+
+.ground {
+  background-color: rgb(182, 176, 95);
+}
+
+.fairy {
+  background-color: rgb(237, 176, 237);
+}
+
+.fighting {
+  background-color: rgb(224, 23, 23);
+}
+
+.psychic {
+  background-color: rgb(234, 105, 168);
+}
+
+.rock {
+  background-color: rgb(167, 119, 47);
+}
+.steel {
+  background-color: rgb(160, 157, 153);
+}
+
+.ice {
+  background-color: rgb(161, 238, 244);
+}
+
+.ghost {
+  background-color: rgb(208, 114, 242);
+}
+
+.dark {
+  background-color: rgb(92, 71, 34);
+}
+
+.dragon {
+  background-color: rgb(149, 39, 239);
 }

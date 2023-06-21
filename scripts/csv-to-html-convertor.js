@@ -14,7 +14,7 @@ const parseRow = (headings, rowData) => {
   return Object.fromEntries(rowData.map((data, i) => [headings[i], data]));
 };
 
-const createElement = (content, tag, attributes = {}) => {
+const createElement = (content, attributes = {}, tag = "div") => {
   const classAttribute = attributes.className
     ? `class="${attributes.className}"`
     : "";
@@ -23,48 +23,66 @@ const createElement = (content, tag, attributes = {}) => {
   return `<${tag} ${classAttribute} ${styleAttribute}>${content}</${tag}>`;
 };
 
+const createTable = (rows) => createElement(rows, {}, "table");
+
 const generatePokemonImage = (id) => {
   const urlId = id.toString().padStart(3, 0);
   const url = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${urlId}.png`;
   const className = "avatar";
   const style = `background-image: url(${url})`;
 
-  return createElement("", "div", { className, style });
+  return createElement("", { className, style });
 };
 
-const transformAttributes = (attributes, headings) => {
-  const features = headings.map((heading) => {
-    const th = createElement(heading, "th");
-    const td = createElement(attributes[heading], "td");
-    return createElement(th + td, "tr");
-  });
+const createFeature = (name, value) => {
+  let featureValue = value;
 
-  const tabulatedFeatures = createElement(features.join(""), "table");
-  return createElement(tabulatedFeatures, "div", { className: "information" });
+  if (name === "Types") {
+    featureValue = value
+      .split(",")
+      .map((type) =>
+        createElement(type, { className: `poketype ${type}` }, "span")
+      )
+      .join("");
+  }
+
+  const tableHeading = createElement(name, {}, "th");
+  const tableData = createElement(featureValue, {}, "td");
+
+  return createElement(tableHeading + tableData, {}, "tr");
 };
 
-const createCard = ({ id, name, ...attributes }) => {
-  const attributesNames = [
-    "types",
-    "weight",
-    "hp",
-    "base_experience",
-    "attack",
-    "defense",
-  ];
+const createCard = ({
+  id,
+  name,
+  types,
+  weight,
+  hp,
+  base_experience,
+  attack,
+  defense,
+}) => {
   const pokemonImage = generatePokemonImage(id);
-
-  const imageContainer = createElement(pokemonImage, "div", {
+  const imageContainer = createElement(pokemonImage, {
     className: "image-container",
   });
-  const avatarName = createElement(name, "div", { className: "name" });
-  const features = transformAttributes(attributes, attributesNames);
+  const avatarName = createElement(name, { className: "name" });
 
-  const card = createElement(imageContainer + avatarName + features, "div", {
-    className: "card",
+  let features = createFeature("Types", types);
+  features += createFeature("Weight", weight);
+  features += createFeature("HP", hp);
+  features += createFeature("XP", base_experience);
+  features += createFeature("Attack", attack);
+  features += createFeature("defense", defense);
+
+  const information = createTable(features);
+  const informationContainer = createElement(information, {
+    className: "information",
   });
 
-  return card;
+  return createElement(imageContainer + avatarName + informationContainer, {
+    className: "card",
+  });
 };
 
 const transformCsv = (content, seperator) => {
@@ -74,19 +92,13 @@ const transformCsv = (content, seperator) => {
     parseRow(headings.split(seperator), property.split(seperator))
   );
 
-  return chunk(pokemons, 4, 0);
+  return pokemons;
 };
 
 const generateHtml = (pokemons) => {
-  const cards = pokemons.map((quadrat) => {
-    const cardRow = quadrat
-      .map((cardContent) => createCard(cardContent))
-      .join("");
+  const cards = pokemons.map((cardContent) => createCard(cardContent)).join("");
 
-    return createElement(cardRow, "div", { className: "card-row" });
-  });
-
-  return createElement(cards.join(""), "div", { className: "card-collection" });
+  return createElement(cards, { className: "card-collection" });
 };
 
 const main = () => {
