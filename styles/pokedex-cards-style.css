@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: linear-gradient(rgb(241, 241, 235), rgb(45, 41, 41));
+  background-color: rgb(207, 206, 201);
 }
 
 main {
@@ -16,18 +16,30 @@ main {
 }
 
 .pokemon {
-  position: sticky;
-  top: 0px;
-  left: 0px;
   margin: 1em auto;
 }
 
-.pokemon-logo {
+header {
   text-align: center;
   text-transform: uppercase;
   font-size: 10em;
   font-weight: 900;
   font-style: italic;
+
+  position: sticky;
+  top: 0px;
+  left: 0px;
+}
+
+.faded-header {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(207, 206, 201);
+  opacity: 0.8;
+
+  position: sticky;
+  top: 0px;
+  left: 0px;
 }
 
 .cards {
