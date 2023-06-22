@@ -12,12 +12,13 @@ body {
 
 main {
   height: 90%;
+  overflow: scroll;
 }
 
 .pokemon {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  position: sticky;
+  top: 0px;
+  left: 0px;
   margin: 1em auto;
 }
 
@@ -31,7 +32,7 @@ main {
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
   gap: 20px;
   width: 70%;
@@ -102,24 +103,24 @@ main {
   z-index: 1;
 }
 
-.card:hover .pokemon-property {
+.card:active .pokemon-property {
   border-radius: 20px;
   border: 1px solid black;
   padding: 4px;
   width: 70%;
 }
 
-.cards:has(.card:hover) .card:not(:hover) {
+.cards:has(.card:active) .card:not(:active) {
   filter: blur(10px);
 }
 
-.card:hover .stats > *:nth-child(even) {
+.card:active .stats > *:nth-child(even) {
   transition-duration: 1s;
   transform: translate(280px, -120px);
   transition-timing-function: ease-out;
 }
 
-.card:hover .stats > *:nth-child(odd) {
+.card:active .stats > *:nth-child(odd) {
   transition-duration: 1s;
   transform: translate(-250px, -100px);
   transition-timing-function: ease-out;
