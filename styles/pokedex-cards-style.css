@@ -7,7 +7,10 @@
 }
 
 body {
-  background: linear-gradient(yellow, rgb(186, 175, 175));
+  background: linear-gradient(
+    rgb(210 233 240 / 37%),
+    hsl(194.29deg 52.94% 76.67% / 62%)
+  );
 }
 
 .page {
@@ -45,13 +48,11 @@ header {
 .card {
   padding: 0.8em;
   border-radius: 10px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 10px;
-
-  background-color: rgb(164 212 227);
+  background-color: hsl(194 51% 66% / 1);
 }
 
 .avatar-container {
@@ -94,11 +95,9 @@ header {
   line-height: 1.6em;
   border: 1px solid rgba(148, 143, 143, 0.2);
   padding: 0em 10px 0em 10px;
-
   display: flex;
   justify-content: space-between;
-
-  background-color: hsl(193, 21%, 89%);
+  background-color: rgb(210 233 240);
 }
 
 .pokemon-property .pokemon-property-type {
@@ -118,13 +117,13 @@ header {
 
 .card:hover {
   box-shadow: 1px 1px 10px black;
-  background-color: hsl(194, 53%, 60%);
+  background-color: hsl(193 53% 58% / 1);
   position: relative;
   bottom: 1px;
   z-index: 1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .cards {
     flex-flow: column nowrap;
     align-content: center;
@@ -147,19 +146,19 @@ header {
 
   .card:active .avatar-container {
     border-radius: 50%;
-    background: transparent;
-
+    background: linear-gradient(159deg, #dcecf4, #abd6e5);
+    box-shadow: 1px 1px 10px hsl(60deg 100% 67%);
     transition-duration: 1s;
     transition-timing-function: ease-out;
-
     transform: scale(1.5);
   }
 
   .card:active .pokemon-property {
     border-radius: 20px;
-    border: 1px solid black;
+    border: 1px solid hsl(60deg 100% 67%);
     padding: 14px;
-
+    background: linear-gradient(177deg, #e8f3f8, hsl(195 52% 77% / 1));
+    box-shadow: 1px 1px 10px hsl(60deg 100% 67%);
     background-color: hsl(0, 0%, 90%);
   }
 
